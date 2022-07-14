@@ -1,0 +1,116 @@
+.shoppingcard {
+    padding-top: 70px;
+    &__title {
+        font-weight: 300;
+        font-size: 40px;
+        color: #121212;
+    }
+    &__wrapper {
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: 200px 571px 110px;
+        grid-auto-rows: minmax(170px, auto);
+    }
+    &__name {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #121212;
+    }
+    &__color, &__size {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        color: #7D7D7D;
+    }
+    &__price {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #121212;
+        span {
+            font-weight: 400;
+            font-size: 40px;
+            color: #514A7E;
+        }
+    }
+    &__res {
+        font-weight: 400;
+        font-size: 20px;
+        color: #121212;
+        padding-left: 5px;
+        margin-top: 60px;
+        span {
+            font-weight: 400;
+            font-size: 40px;
+            color: #514A7E;
+        }
+    }
+    
+    &__img {
+        img {
+            width: 178px;
+            height: 165px;
+            object-fit: cover;
+        }
+    }
+    &__count {
+        display: flex;
+        gap: 27px;
+        margin-top: 9px;
+    }
+    &__more, &__less {
+        border: none;
+        color: #514A7E;
+        background: none;
+        font-size: 30px;
+    }
+    &__countres {
+        font-size: 30px;
+        color: #514A7E;
+    }
+    &__delete {
+        border: none;
+        background: none;
+        span {
+            padding-left: 10px;
+            font-weight: 300;
+            font-size: 14px;
+            color: #7D7D7D;
+        }
+    }
+    &__catalog,&__mane {
+        font-weight: 300;
+        font-size: 16px;
+        color: #7D7D7D;
+        text-decoration: none;
+        &:hover {
+            color: #313131;
+        }
+    }
+    &__order {
+        margin-top: 50px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 149.28px;
+        height: 37px;
+        background: #514A7E;
+        border: 0.5px solid #514A7E;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFDF5;
+        text-decoration: none;
+        &:hover {
+            background:white;
+            color: #514A7E;
+        }
+    }
+    .clear {
+        font-weight: 300;
+        font-size: 14px;
+        margin-top: 30px;
+        padding-left: 5px;
+        color: #7D7D7D;
+    }
+}

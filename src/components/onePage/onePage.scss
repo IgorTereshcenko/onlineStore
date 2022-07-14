@@ -1,0 +1,95 @@
+.onePage {
+    padding-top: 60px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 590px 390px;
+    }
+    &__title {
+        font-weight: 300;
+        font-size: 40px;
+        color: #121212;
+    }
+    &__image {
+        img {
+            margin-top: 60px;
+            width: 75%;
+            height: 75%;
+            object-fit: cover;
+        }
+    }
+    &__descr {
+        margin-top: 124px;
+    }
+    &__price {
+        font-weight: 300;
+        font-size: 40px;
+        color: #121212;
+    }
+    &__size {
+        font-weight: 400;
+        font-size: 20px;
+        color: #121212;
+    }
+    &__sizeBtns {
+        margin-top: 10px;
+        display: flex;
+        gap: 14px;   
+    }
+    &__sizeBtn {
+        width: 30px;
+        height: 30px;
+        border: 0.3px solid #514A7E;
+        font-weight: 300;
+        font-size: 16px;
+        color: #514A7E;
+        &:hover {
+            background:#514A7E;
+            color:white;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px lightskyblue;
+            background:#514A7E;
+            color:white;
+          }
+    }
+    &__shoppingcardBtn {
+        margin-top: 40px;
+        width: 149.28px;
+        height: 37px;
+        filter: drop-shadow(0px 4px 10px rgba(81, 74, 126, 0.4));
+        background: #514A7E;
+        border: 0.5px solid #514A7E;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFDF5;
+        &:hover {
+            background:white;
+            color:#514A7E;
+        }
+    }
+    &__about {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #121212;
+    }
+    &__more {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+    &__shoppingcard,&__mane,&__catalog {
+        font-weight: 300;
+        font-size: 16px;
+        color: #7D7D7D;
+        text-decoration: none;
+        &:hover {
+            color: #313131;
+        }
+    }
+  
+    
+
+}

@@ -1,0 +1,12 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  background: #FFFDF5;
+}
+
+
+.container {
+    width: 1168px;
+    margin: 0 auto;
+}
