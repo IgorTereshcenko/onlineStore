@@ -1,4 +1,6 @@
 import './catalog.scss';
+import { useSelector } from "react-redux";
+import Spinner from '../spinner/Spinner';
 import { useState } from 'react';
 
 import shoppingcardImg from '../../resurses/shoppingcart.svg';
@@ -7,6 +9,8 @@ import Slider from 'react-rangeslider'
 
 
 const Catalog = ({data,onChoiseSize,onAddShoppingCard}) => {
+
+    const shopsLoadingStatus = useSelector(state => state.data.shopsLoadingStatus);
 
     const [term, setTerm] = useState('');
     const [volume, setVolume] = useState(0);
@@ -45,6 +49,12 @@ const Catalog = ({data,onChoiseSize,onAddShoppingCard}) => {
         if (volume <= 4000) {
             return items.filter(item => item.price <= 4000);
         } 
+    }
+
+    if (shopsLoadingStatus === 'loading') {
+        return <Spinner/>
+    } else if (shopsLoadingStatus === 'error') {
+        return <h5>Ошибка загрузки</h5>
     }
 
     const visibleData = searchPrice(searchEmp(data, term),volume);

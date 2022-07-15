@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {useHttp} from '../../hooks/http.hook';
 
-
 const Confirmation = () => {
 
-    const {ordering,shoppingcard} = useSelector(state => state);
+    const shoppingcard = useSelector(state => state.shoppingcard.shoppingcard);
+    const ordering = useSelector(state => state.ordering.ordering);
     const {request} = useHttp();
     const [accept, setAccept] = useState(false);
 

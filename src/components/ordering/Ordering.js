@@ -2,7 +2,7 @@ import './ordering.scss';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import {orderingFetched} from '../../actions';
+import {orderingFetched} from './orderingSlice';
 import { useNavigate } from "react-router-dom";
 import { nanoid } from 'nanoid'
 

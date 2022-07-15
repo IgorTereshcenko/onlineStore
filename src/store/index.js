@@ -1,5 +1,7 @@
-import { createStore } from 'redux';
-import reducer from '../reducers';
+import { createStore,combineReducers } from 'redux';
+import data from '../components/catalog/catalogSlice';
+import shoppingcard from '../components/shoppingcard/shoppingcardSlice';
+import ordering from '../components/ordering/orderingSlice';
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
@@ -9,12 +11,13 @@ const persistConfig = {
     blacklist: ["data", "shopsLoadingStatus",'total','ordering','purchased']
 }
 
-const persistedReducer = persistReducer(persistConfig, reducer)
+const rootReducer = combineReducers({
+    data,
+    shoppingcard,
+    ordering
+})  
+
+const persistedReducer = persistReducer(persistConfig,rootReducer)
 
 export let store = createStore(persistedReducer)
 export let persistor = persistStore(store)
-
-
-/* const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); */
-
-/* export default {store,persistor};  */

@@ -90,6 +90,18 @@
       "payment": "ЕРИП",
       "comment": "test2"
     },
+    [],
+    {
+      "id": "2SrwmP0Ja23rmFwJetg8e",
+      "name": "dasdasd",
+      "tele": "312312",
+      "index": "312312",
+      "adress": "asdadsad",
+      "email": "dsadsada@dsad",
+      "delivery": "Европочтой + курьер",
+      "payment": "ЕРИП",
+      "comment": "dsa"
+    },
     []
   ],
   "purchased": [
@@ -127,6 +139,32 @@
         "id": "123231",
         "count": "1",
         "totalPrice": "1000",
+        "more": "Тут будет красочное описание данной вещи"
+      }
+    ],
+    [
+      {
+        "img": "https://images.wbstatic.net/big/new/23960000/23964935-1.jpg",
+        "price": "2700",
+        "descr": "платье вечернее черное",
+        "color": "черная",
+        "size": "M",
+        "id": "952647",
+        "count": "1",
+        "totalPrice": "2700",
+        "more": "Тут будет красочное описание данной вещи"
+      }
+    ],
+    [
+      {
+        "img": "https://alimentola.info/uploads/posts/2022-03/1647507198_1-alimentola-info-p-bluza-s-virezom-na-spine-devushka-krasivo-1.jpg",
+        "price": "1700",
+        "descr": "блузка с вырезом на спине",
+        "color": "черная",
+        "size": "S",
+        "id": "894256",
+        "count": "1",
+        "totalPrice": "1700",
         "more": "Тут будет красочное описание данной вещи"
       }
     ]

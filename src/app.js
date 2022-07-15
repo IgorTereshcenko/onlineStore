@@ -2,7 +2,9 @@ import Catalog from "./components/catalog/Catalog";
 import { useEffect, useCallback } from "react";
 import {useHttp} from '../src/hooks/http.hook';
 import { useDispatch, useSelector } from 'react-redux';
-import { shopsFetching, shopsFetched, shopsFetchingError,shoppingcardLoading,shoppingcardDeleted, shoppingcardTotal, increaseCount, decreaseCount, choiseSize } from '../src/actions';
+import {shopsFetching,shopsFetched,shopsFetchingError,shopsChoiseSize} from './components/catalog/catalogSlice';
+import {shoppingcardLoading,shoppingcardDeleted,shoppingcardTotal,shoppingcardIncreaseCount,shoppingcardDecreaseCount} from './components/shoppingcard/shoppingcardSlice';
+
 
 import MainPage from "./components/mainPage/MainPage";
 import Shoppingcard from "./components/shoppingcard/Shoppingcard";
@@ -18,9 +20,11 @@ import Confirmation from "./components/confirmation/Confirmation";
 
 const App = () => {
 
-    const {request} = useHttp();
-    const {data, shopsLoadingStatus, shoppingcard, total} = useSelector(state => state);
+    const data = useSelector(state => state.data.data);
+    const {shoppingcard,total} = useSelector(state => state.shoppingcard);
+  
     const dispatch = useDispatch();
+    const {request} = useHttp();
     
     useEffect(() => {
         dispatch(shopsFetching());
@@ -31,7 +35,7 @@ const App = () => {
 
     useEffect(() => {
             dispatch(shoppingcardTotal())
-    },[shoppingcard])
+    },[shoppingcard]) 
 
     const onAddShoppingCard = (item) => {
         dispatch(shoppingcardLoading(item))
@@ -43,15 +47,15 @@ const App = () => {
     })
 
     const onIncreaseCount = useCallback((id) => {
-        dispatch(increaseCount(id))
+        dispatch(shoppingcardIncreaseCount(id))
     },[shoppingcard])
 
     const onDecreaseCount = useCallback((id) => {
-        dispatch(decreaseCount(id));
+        dispatch(shoppingcardDecreaseCount(id));
     },[shoppingcard])
 
     const onChoiseSize = useCallback((e) => {
-        dispatch(choiseSize(e.target.value))
+        dispatch(shopsChoiseSize(e.target.value))
     },[data])
     
 
