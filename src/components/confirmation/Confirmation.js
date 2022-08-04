@@ -12,9 +12,9 @@ const Confirmation = () => {
     const [accept, setAccept] = useState(false);
 
     const onAcceptDate = () => {
-        request('http://localhost:3001/ordering', 'POST', JSON.stringify(ordering))
+        request('https://dour-splashy-drum.glitch.me/ordering', 'POST', JSON.stringify(ordering))
             .then(console.log(`отправлено`))
-        request('http://localhost:3001/purchased', 'POST', JSON.stringify(shoppingcard))
+        request('https://dour-splashy-drum.glitch.me/purchased', 'POST', JSON.stringify(shoppingcard))
         // данные улетают на "бэк" в объект purchased
             .then(console.log('отправлено'))
         

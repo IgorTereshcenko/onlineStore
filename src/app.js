@@ -28,7 +28,7 @@ const App = () => {
     
     useEffect(() => {
         dispatch(shopsFetching());
-        request('http://localhost:3001/data')
+        request('https://dour-splashy-drum.glitch.me/data')
             .then(data => dispatch(shopsFetched(data)))
             .catch(() => dispatch(shopsFetchingError()))
     },[])
