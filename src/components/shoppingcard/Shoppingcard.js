@@ -45,7 +45,7 @@ const shoppincardList = data.map(item => {
                 <Link to = '/catalog' className='shoppingcard__catalog'>каталог</Link>
               {data.length > 0 ? shoppincardList : <h2 className='clear'>Корзина пуста</h2>}
               {<div className="shoppingcard__res">Итого: <span>{total}</span></div> }
-              <Link to='/ordering' className='shoppingcard__order'>Заказать</Link>
+              <Link to={data.length > 0 ? '/ordering' : '/shoppingcard'} className='shoppingcard__order'>Заказать</Link>
             </div>
         </div>
     )
