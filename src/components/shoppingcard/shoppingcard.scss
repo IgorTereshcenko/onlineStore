@@ -1,5 +1,6 @@
 .shoppingcard {
     padding-top: 70px;
+    padding-bottom: 40px;
     &__title {
         font-weight: 300;
         font-size: 40px;
@@ -114,3 +115,189 @@
         color: #7D7D7D;
     }
 }
+
+@media (max-width: 1024px) {
+    .shoppingcard {
+        .container {
+            max-width: 1009px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .shoppingcard {
+        .container {
+            max-width: 977px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .shoppingcard {
+        .container {
+            max-width: 750px;
+        }
+        &__title {
+            font-size: 88px;
+            margin-left: 20px;
+        }
+        &__mane {
+            font-size: 32px;
+            margin-left: 20px;
+        }
+        &__catalog {
+            font-size: 32px;
+        }
+        &__wrapper {
+            margin-top: 55px;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 228px 228px 228px;
+            column-gap: 20px;
+            grid-auto-rows: minmax(300px, auto);
+        }
+        &__img {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__name {
+            font-size: 25px;
+        }
+        &__color, &__size {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        &__more {
+            font-size: 40px;  
+        }
+        &__less {
+            font-size: 40px;
+            margin-top: -8px;
+        }
+        &__countres {
+            font-size: 40px;   
+        }
+        &__delete {
+            margin-top: 20px;
+            img {
+                width: 38px;
+            }
+            span {
+                display: none;
+            }
+        }
+        &__price {
+            font-size: 25px;
+            span {
+                font-size: 25px;
+            }
+        }
+        &__res {
+            font-size: 45px;
+            margin-left: 20px;
+            span {
+                font-size: 45px;
+            }
+        }
+        &__order {
+            margin-left: 20px;
+            width: 319.28px;
+            height: 72px;
+            font-size: 30px;
+        }
+        .clear {
+            font-size: 47px;
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .shoppingcard {
+        .container {
+            max-width: 560px;
+        }
+        &__title {
+            font-size: 80px;
+            margin-left: 20px;
+        }
+        &__mane {
+            font-size: 28px;
+            margin-left: 20px;
+        }
+        &__catalog {
+            font-size: 28px;
+        }
+        &__wrapper {
+            margin-top: 55px;
+            display: grid;
+            grid-template-columns: 480px;
+            grid-auto-rows: minmax(300px, auto);
+        }
+        &__img {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__descr {
+            margin-top: 20px;
+        }
+        &__name {
+            font-size: 38px;
+        }
+        &__color, &__size {
+            font-size: 34px;
+            margin-top: 20px;
+        }
+        &__more {
+            font-size: 77px;
+            margin-top: 20px;
+        }
+        &__less {
+            font-size: 77px;
+            margin-top: 3px;
+        }
+        &__countres {
+            font-size: 77px;
+            margin-top: 20px;
+        }
+        &__delete {
+            margin-top: 20px;
+            img {
+                width: 55px;
+            }
+            span {
+                display: none;
+            }
+        }
+        &__price {
+            font-size: 41px;
+            margin-top: 20px;
+            span {
+                font-size: 41px;
+            }
+        }
+        &__res {
+            font-size: 41px;
+            margin-left: 20px;
+            span {
+                font-size: 41px;
+            }
+        }
+        &__order {
+            margin-left: 20px;
+            width: 509.28px;
+            height: 136px;
+            font-size: 42px;
+        }
+        .clear {
+            font-size: 47px;
+        }
+    }
+}
+

@@ -1,9 +1,11 @@
 .main_page {
     padding-top: 135px;
+    padding-left: 10px;
+    padding-right: 10px;
     &__wrapper {
         display: grid;
         grid-template-columns: 540px 480px;
-        column-gap: 157px;
+        column-gap: 219px;
     }
     &__title {
         font-weight: 300;
@@ -15,6 +17,8 @@
         margin-top: 60px;
     }
     &__descr {
+        display: block;
+        margin: 0 auto;
         margin-top: 60px;
         width: 249px;
         font-weight: 300;
@@ -22,6 +26,13 @@
         line-height: 118%;
         align-items: center;
         color: #7D7D7D;
+    }
+    &__imageImg {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &__btn {
         text-decoration: none;
@@ -31,7 +42,7 @@
         color: #FFFDF5;
         text-align: left;
         width: 193px;
-        height: 193px;
+        height: 146px;
         border-radius: 100%;
         display: block;
         margin: 0 auto;
@@ -46,5 +57,61 @@
         position: absolute;
         top: 113px;
         left: 77px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main_page {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 63px;
+        margin-top: -8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-bottom: -8px;
+        height: 100vh;
+        padding-bottom: 10px;
+        background-image: url(../../resurses/backgroundmobile.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &__imageImg, &__welcomeImg {
+           display: none;
+        }
+        .container {
+            width: 317px;
+        }
+        &__wrapper {
+            grid-template-columns: 100%;
+        }
+        &__title {
+            font-weight: 400;
+            font-size: 37px;
+            line-height: 87.3%;
+            color: #FFFDF5;
+            text-align: center;
+        }
+        &__descr {
+            text-align: center;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 118%;
+            color: #FFFDF5;
+            margin-top: 30px;
+        }
+        &__btn {
+            margin-top: 30px;
+            width: 65px;
+            height: 49px;
+            font-size: 11px;
+            padding-left: 15px;
+            padding-top: 33px;
+        }
+        .btn_img {
+            width: 37px;
+            top: 53px;
+            left: 32px;
+        }
+        
     }
 }

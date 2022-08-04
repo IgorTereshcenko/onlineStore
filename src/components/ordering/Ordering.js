@@ -49,7 +49,7 @@ const Ordering = () => {
 
     return (
     <div className="ordering">
-        
+        <div className="container">
         <Link to = '/' className='ordering__mane'>на главную/</Link>
         <Link to = '/catalog' className='ordering__catalog'>каталог</Link>
 
@@ -105,73 +105,80 @@ const Ordering = () => {
                 </div>
             </div>
             
-        <h4 className="ordering__titleDelivery">Выберите способ доставки</h4>
-        <div className="ordering__checkboxDelivery">
+            <h4 className="ordering__titleDelivery">Выберите способ доставки</h4>
+            <div className="ordering__checkboxDelivery">
             <input 
                     type="radio"
+                    id='titleDelivery'
                     name='titleDelivery' 
                     className="ordering__delivery"
                     value='Белпочтой'
                     onChange = {(e) => setDelivery(e.target.value)}
                     />
-                    <span>Белпочта</span>
+                <label htmlFor='titleDelivery'>Белпочта</label>
                 <input 
-                    type="radio" 
+                    type="radio"
+                    id='titleDelivery2' 
                     className="ordering__delivery"
                     name='titleDelivery'
                     value='Европочтой'
                     onChange = {(e) => setDelivery(e.target.value)}
                     />
-                    <span>Европочта</span>
+                <label htmlFor='titleDelivery2'>Европочта</label>
                 <input 
-                    type="radio" 
+                    type="radio"
+                    id='titleDelivery3' 
                     className="ordering__delivery"
                     name='titleDelivery'
                     value='Европочтой + курьер'
                     onChange = {(e) => setDelivery(e.target.value)}
                     />
-                    <span>Европочта + курьер</span>
+                <label htmlFor='titleDelivery3'>Европочта + курьер</label>
                 <input 
-                    type="radio" 
+                    type="radio"
+                    id='titleDelivery4' 
                     className="ordering__delivery"
                     name='titleDelivery'
                     value='Курьером'
                     onChange = {(e) => setDelivery(e.target.value)}
                     />
-                    <span>Курьер</span>
+                <label htmlFor='titleDelivery4'>Курьер</label>
         </div>
         
             <h4 className="ordering__titleMoney">Выберите способ оплаты</h4>
             <div className="ordering__checkboxMoney">
                 <input 
                     type="radio"
+                    id='titleMoney'
                     name='titleMoney' 
                     className="ordering__money"
                     value='Картой'
                     onChange = {(e) => setPayment(e.target.value)}
                     />
-                    <span>Банковская карта</span>
+                <label htmlFor='titleMoney'>Банковская карта</label>
                 <input 
                     type="radio"
+                    id='titleMoney2'
                     name='titleMoney'  
                     className="ordering__money"
                     value='Наложенным платежем'
                     onChange = {(e) => setPayment(e.target.value)}
                     />
-                    <span>Наложенный платёж.
-                            <br /> 
-                        Оплата при получении</span>
+                <label htmlFor='titleMoney2'>Наложенный платёж</label>
                 <input
-                    type="radio" 
+                    type="radio"
+                    id='titleMoney3' 
                     name='titleMoney' 
                     className="ordering__money"
                     value='ЕРИП'
                     onChange = {(e) => setPayment(e.target.value)}
                     />
-                    <span>Оплата в ЕРИП</span>
+                <label htmlFor='titleMoney3'>Оплата в ЕРИП</label>
             </div>
         <button  type="submit" className="ordering__btn">Подтвердить</button>
         </form>
+        </div>
+        
     </div>
     )
 }

@@ -8,6 +8,7 @@
     }
     &__wrapper {
         margin-top: 70px;
+        justify-content: center;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -119,6 +120,8 @@
           color:white;
       }
     }
+
+
     /**
 * Rangeslider
 */
@@ -305,4 +308,110 @@
     transform: translate3d(-50%, 0, 0);
   }
   
+}
+
+@media (max-width: 1024px) {
+    .catalog {
+        .container {
+            max-width: 1009px;
+        }
+    }
+  
+}
+
+@media (max-width: 992px) {
+    .catalog {
+        .container {
+            max-width: 977px;
+      }
+    }
+}
+
+@media (max-width: 768px) {
+  .catalog {
+     padding-top: 0;
+     .container {
+        max-width: 750px;
+  }
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .catalog {
+    padding-top: 0px;
+    .container {
+      width: 560px;
+  }
+      &__wrapper {
+          display: grid;
+          grid-template-columns: 433px;
+          grid-auto-rows: minmax(500px, auto);
+      }
+      &__item {
+        width: 433px;
+      }
+      &__input {
+        width: 526px;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: -1px;
+        font-size: 30px;
+        height: 35px;
+        background: #FFFDF5;
+        border-radius: 10px;
+      }
+      &__img {
+        img {
+            width: 100%;
+            height: 100%;
+            
+      }
+    }
+    &__price {
+      font-size: 45px;
+    }
+    &__descr {
+      font-size: 29px;
+    }
+    &__sizeBtn {
+      width: 77px;
+      height: 66px;
+      font-size: 35px;
+    }
+    &__more {
+      width: 348.28px;
+      height: 73px;
+      font-size: 35px;
+    }
+    &__shoppingcard {
+      top: 590px;
+      right: 10px;
+      img {
+        width: 32px;
+      }
+    }
+    &__title {
+      font-size: 87px;
+      margin-bottom: 0;
+    }
+    &__shoppingcardLink,&__mane {
+      font-size: 33px;
+    }
+    &__priceBR {
+      font-size: 38px;
+    }
+  }
+  .catalog .rangeslider-horizontal .rangeslider__handle {
+    width: 38px;
+    height: 38px;
+}
+.catalog .rangeslider-horizontal {
+  margin-left: 0px;
+  margin-top: 61px;
+  width: 282px;
+  height: 4px;
+  border-radius: 10px;
+}
+
 }

@@ -50,12 +50,12 @@
         color: #121212;
     }
     &__checkboxDelivery {
-        width: 895px;
-        height: 42px;
+        min-width: 895px;
+        min-height: 42px;
         align-items: center;
         display: flex;
         justify-content: space-between;
-        span {
+        label {
             margin-left: -130px;
             font-weight: 400;
             font-size: 16px;
@@ -75,13 +75,13 @@
         margin-top: 40px;
     }
     &__checkboxMoney {
-        width: 690px;
-        height: 40px;
+        min-width: 690px;
+        min-height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        span {
-            margin-left: -83px;
+        label {
+            margin-left: -223px;
             font-weight: 400;
             font-size: 16px;
             color: #514A7E;
@@ -112,6 +112,190 @@
         text-decoration: none;
         &:hover {
             color: #313131;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .ordering {
+        .container {
+            width: 1009px;
+        }
+        &__checkboxDelivery {
+            justify-content: space-around;
+            label {
+                margin-left: -91px;
+            }
+        }
+        &__checkboxMoney {
+            justify-content: space-around;
+            label {
+                margin-left: -91px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .ordering {
+        .container {
+            width: 977px;
+        }
+        &__checkboxDelivery {
+            justify-content: space-around;
+            label {
+                margin-left: -91px;
+            }
+        }
+        &__checkboxMoney {
+            justify-content: space-around;
+            label {
+                margin-left: -91px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .ordering {
+        .container {
+            width: 750px;
+        }
+        &__inputsDate {
+            column-gap: 88px;
+        }
+        &__date {
+            width: 356px;
+        }
+        &__textarea {
+            width: 339px;
+        }
+        &__checkboxDelivery {
+            min-width: 825px;
+            label {
+                margin-left: -114px;
+            }
+        }
+        &__checkboxMoney {
+            label {
+                margin-left: -98px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ordering {
+        .container {
+            width: 540px;
+          }
+        &__mane, &__catalog {
+            font-size: 47px;
+        }
+        &__form {
+            margin-left: 0;
+        }
+        &__title {
+            text-align: left;
+            font-size: 130px;
+        }
+        &__titleDate {
+            font-size: 41px;
+        }
+        &__inputsDate {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 541px;
+            column-gap: 125px;
+        }
+        &__date {
+            width: 863px;
+            font-size: 68px;
+        }
+        &__textarea {
+            width: 863px;
+            height: 176px;
+            font-size: 38px;
+            margin-top: 40px;
+        }
+        &__checkboxDelivery {
+            margin-bottom: 0;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 149px;
+            label {
+                font-weight: 400;
+                font-size: 58px;
+                color: #514A7E;
+                text-align: left;
+                display: inline-flex;
+                align-items: center;
+            }:after {
+                content: '';
+                display: flex;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #514A7E;
+                border-radius: 100%;
+                margin-left: 10px;
+            }   
+        }
+        &__delivery:checked+label::after {
+            background-color:#514A7E;
+            border-color:#7e323c;
+        }
+        &__titleDelivery {
+            margin-right: auto;
+            font-size: 43px;
+        }
+        &__delivery, &__money {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        &__titleMoney {
+            margin-top: 64px;
+            margin-right: auto;
+            font-size: 43px;
+        }
+        &__checkboxMoney {
+            margin-bottom: 0;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 239px;
+            label {
+                font-weight: 400;
+                margin-left: -223px;
+                font-size: 58px;
+                color: #514A7E;
+                text-align: left;
+                display: inline-flex;
+                align-items: center;
+            }:after {
+                content: '';
+                display: flex;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #514A7E;
+                border-radius: 100%;
+                margin-left: 10px;
+            }
+        }
+        &__money:checked+label::after {
+            background-color:#514A7E;
+            border-color:#7e323c;
+        }
+      
+        
+        &__btn {
+            margin-top: 50px;
+            margin-left: 232px;
+            width: 500px;
+            height: 124px;
+            font-size: 44px;
         }
     }
 }

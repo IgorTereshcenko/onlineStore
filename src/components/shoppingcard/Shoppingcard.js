@@ -11,7 +11,7 @@ const shoppincardList = data.map(item => {
             <div className="shoppingcard__img">
                 <img src={item.img} alt="" />
             </div>
-            <div className="shoppingcard__desr">
+            <div className="shoppingcard__descr">
                 <div className="shoppingcard__name">{item.descr}</div>
                 <div className="shoppingcard__color">{'Цвет:' + item.color}</div>
                 <div className="shoppingcard__size">{'Размер:' + item.size}</div>

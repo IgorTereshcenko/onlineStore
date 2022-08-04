@@ -9,22 +9,22 @@ const MainPage = () => {
         <div className="main_page">
             <div className="container">
                 <div className="main_page__wrapper">
-                    <div className="main_page__welcome">
-                        <div className="main_page__welcomeImg">
-                            <img src={img1} alt="shirt" />
+                        <div className="main_page__welcome">
+                            <div className="main_page__welcomeImg">
+                                <img src={img1} alt="shirt" />
+                            </div>
+                            <h2 className="main_page__title">Добро пожаловать в Cokteil</h2>
+                            <div className="main_page__descr">Экономим Ваше время! Предлагаем лучшие цены! Доставляем в кратчайшие сроки!</div>
                         </div>
-                        <h2 className="main_page__title">Добро пожаловать в Cokteil</h2>
-                        <div className="main_page__descr">Экономим Ваше время! Предлагаем лучшие цены! Доставляем в кратчайшие сроки!</div>
-                    </div>
-                    <div className="main_page__image">
-                        <div className="main_page__imageImg">
-                            <img src={img2} alt="jeans" />
+                        <div className="main_page__image">
+                            <div className="main_page__imageImg">
+                                <img src={img2} alt="jeans" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <Link to= '/catalog' className="main_page__btn">Каталог
+                    <Link to= '/catalog' className="main_page__btn">Каталог
                     <img src={img3} alt="arrow" className="btn_img" />
-                </Link>
+                    </Link> 
             </div>
         </div>
     )
